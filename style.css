@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  font-family: "Source Sans Pro", sans-seri;
+}
+/* Header section */
+header {
+  height: 55px;
+  width: 100%;
+  background: rgba(0, 0, 0, 1);
+  transition: all 0.4s ease-out, background 1s ease-out;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden !important;
+}
+.main-header {
+  overflow-x: hidden !important;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  height: 55px;
+  transition: all 0.4s ease-out, background 1s ease-out;
+}
+
+header.nav-open {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  background: black;
+  transition: all 0.45s ease-out, background 0.8s ease-out;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 980px;
+
+  margin-inline: auto;
+  align-items: center;
+
+  margin-block: auto;
+}
+/* Main Section */
+.phone_landing {
+  padding-top: 40px;
+}
+.fitness_and_watch,
+.macbookair_and_apple_card,
+.airpod_and_watch {
+  gap: 10px;
+  margin: 10px;
+}
+.background__variable {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  max-width: 100%;
+}
+.iphone_landing {
+  background-image: url("/img/iphone14pro.jpg");
+  min-height: 95vh;
+}
+.iphone_perorder {
+  background-image: url("/img/iphone14preorder.jpg");
+}
+.watch_section {
+  background-image: url("/img/apple_watch.jpg");
+}
+.airpod_and_watch_left {
+  background-image: url("/img/apple_airpod_pro.jpg");
+}
+.airpod_and_watch_right {
+  background-image: url("/img/apple_watch_series.jpg");
+}
+.fitness_and_watch_left {
+  background-image: url("/img/apple_watch_promo.jpg");
+}
+.fitness_and_watch_right {
+  background-image: url("/img/apple_fitness_plus.jpg");
+}
+.macbookair_and_apple_card_left {
+  background-image: url("/img/mac_book_air.png");
+}
+.macbookair_and_apple_card_right {
+  background-image: url("/img/apple_card.jpg");
+}
+.text-color-white {
+  color: rgb(214, 214, 214);
+  text-decoration: none;
+}
+
+.text-color-white:hover {
+  color: #f5f5f7;
+}
+
+/* Foooter Section */
+footer {
+  background-color: rgb(245, 245, 247);
+}
+.footer_section > div > ul > li {
+  color: #86868b;
+}
+.link > li > a {
+  color: #424245;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+.link > li > a:hover {
+  color: #424245;
+  text-decoration: underline;
+}
+.p {
+  color: #6e6e73;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about_description_gray {
+  color: #6e6e73;
+  font-size: 0.8em;
+}
+strong {
+  color: #424245;
+
+  font-weight: 600;
+}
+
+ul {
+  padding: 0;
+}
+
+.footer {
+  max-width: 980px;
+  margin: auto;
+}
+
+.apple-icon,
+.cart-icon {
+  display: none;
+}
+.about_description {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.terms-of-use,
+.footer_section {
+  border-top: 1px solid #d2d2d7;
+}
+.terms-of-use > p {
+  color: #424245;
+  padding-inline: 8px;
+  margin-block: 8px;
+  display: block;
+  border-right: 1px solid #d2d2d7;
+}
+.terms-of-use :last-child {
+  border: none;
+}
+/* Media Queries */
+@media only screen and (max-width: 965px) {
+  /* Burger Menu */
+  .fitness_and_watch,
+  .macbookair_and_apple_card,
+  .airpod_and_watch {
+    gap: 5px;
+    margin: 0;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  .burger > span {
+    width: 20px;
+    color: white;
+    height: 1px;
+    background-color: white;
+  }
+  .line1 {
+    margin-bottom: 2.5px;
+    transition: transform 0.45s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  }
+  .line2 {
+    margin-top: 2.5px;
+    transition: transform 0.45s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  }
+  .line1.toggle {
+    transform: rotate(45deg);
+    margin-bottom: 0;
+    transition: transform 0.45s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  }
+  .line2.toggle {
+    transform: rotate(-45deg);
+    margin-top: 0;
+    transition: transform0.45s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  }
+  /* Appple Logo and Cart Icon style */
+  .apple-icon {
+    display: block;
+    margin-inline: auto;
+  }
+  .cart-icon {
+    padding-right: 5px;
+    display: block;
+  }
+  .apple-icon1,
+  .cart-icon1 {
+    display: none !important;
+  }
+  nav.main-header.nav-open > .cart-icon {
+    opacity: 0;
+  }
+  /* Nav-Bar or Ul */
+  .nav-links > li {
+    display: block;
+    width: 80%;
+  }
+  .over {
+    overflow-x: hidden;
+  }
+  .main-header {
+    overflow-x: hidden !important;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links {
+    position: fixed;
+    top: 30px;
+
+    visibility: hidden;
+    flex-direction: column;
+    opacity: 0;
+    justify-content: space-between;
+    min-width: 80%;
+    height: 100%;
+    margin-inline: auto;
+    transition: all 0.45 1s ease-out, opacity 0.7s 1s ease-out; /* display: none; */
+  }
+
+  .nav-links.nav-open > li {
+    visibility: none;
+    margin: 0;
+    border-bottom: 0.3px solid rgba(128, 128, 128, 0.5);
+    padding-inline: 0;
+    padding-block: 10px;
+  }
+  .nav-links.nav-open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    color: white;
+    width: 100% !important;
+    transition: all 0.45s ease-out, opacity 0.7s ease-out;
+    transition-delay: 0.2s;
+  }
+  /* Footer Section */
+  .footer_section > div > ul {
+    display: none;
+    opacity: 0;
+    transition: opacity 10s ease-out;
+    transition-delay: 0.5s;
+  }
+
+  .footer_section > div > ul.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 10s ease-out;
+    transition-delay: 0.5s;
+  }
+
+  .footer_section > div > div > strong {
+    border-top: 0.2px solid rgba(128, 128, 128, 0.2);
+    display: block;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .footer_section > div {
+    display: block;
+  }
+  .flexx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 966px) {
+  .footer_section > div > div > i {
+    display: none;
+  }
+  .footer_list {
+    display: flex;
+  }
+}
